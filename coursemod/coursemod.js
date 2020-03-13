@@ -88,7 +88,7 @@
     Reveal.addKeyBinding({keyCode: 86, key: 'V', description: 'Courseware view'}, function() {
         config.coursemod.shown = !config.coursemod.shown;
         toggleCourseView(config.coursemod.shown);
-	Reveal.layout();
+        Reveal.layout();
     });
 
     Reveal.addEventListener( 'slidechanged', function( event ) {
