@@ -85,16 +85,11 @@
         toggleCourseView(slideOverride);
     }
 
-    Reveal.configure({
-        keyboard: {
-            86: function() {
-                config.coursemod.shown = !config.coursemod.shown;
-                toggleCourseView(config.coursemod.shown);
-		Reveal.layout();
-            }
-        }
+    Reveal.addKeyBinding({keyCode: 86, key: 'V', description: 'Courseware view'}, function() {
+        config.coursemod.shown = !config.coursemod.shown;
+        toggleCourseView(config.coursemod.shown);
+	Reveal.layout();
     });
-    Reveal.registerKeyboardShortcut( 'V', 'Courseware view' );
 
     Reveal.addEventListener( 'slidechanged', function( event ) {
         var currentSlide = event.currentSlide;
